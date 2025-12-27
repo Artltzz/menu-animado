@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #728499;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    position: relative;
+    height: 120px;
+    width: 500px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.header ul {
+    position: relative;
+    display: flex;
+}
+
+.header ul li {
+    position: relative;
+    list-style-type: none;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header ul li a {
+    position: relative;
+    height: 120px;
+    width: 90px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #728499;
+    font-size: 32px;
+    transition: all 0.3s ease;
+}
+
+.header ul li a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+    color: #6947ff; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.header ul li a:focus {
+    transform: scale(1.1); 
+    transition: transform 0.1s ease-in-out;
+}
+
+.header ul li a:hover {
+    transform: translateX(10px); 
+    transition: transform 0.3s ease-in-out;
+}

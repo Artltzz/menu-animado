@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #728499, #2a3b4c); /* Fundo com gradiente suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    position: relative;
+    height: 120px;
+    width: 500px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Sombra intensa para dar destaque */
+    animation: slideIn 0.5s ease-in-out;
+}
+
+
+
+.header ul {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header ul li {
+    position: relative;
+    list-style-type: none;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Movimento mais suave de entrada */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header ul li a {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #728499;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header ul li a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone */
+    color: #fff; /* Altera a cor do ícone */
+    background: #ff6347; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    border-radius: 50%;
+}
+
+.header ul li a:focus {
+    transform: scale(1.1); /* Aumento leve ao clicar */
+    transition: transform 0.1s ease-in-out;
+}
+
+.header ul li a:hover {
+    transform: translateX(10px); /* Deslocamento para a direita */
+}
+
+.header ul li a i {
+    transition: transform 0.3s ease;
+}
+
+.header ul li a:hover i {
+    transform: rotate(15deg); /* Efeito de rotação nos ícones */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.header ul li a {
+    animation: pulse 2s infinite; /* Efeito de pulso contínuo */
+}
+
