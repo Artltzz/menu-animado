@@ -100,19 +100,11 @@ body {
     transition: transform 0.3s ease;
 }
 
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.header ul li a:hover i {
+    transform: rotate(15deg); /* Efeito de rotação nos ícones */
 }
+
+
 
 .header ul li a {
     animation: pulse 2s infinite; /* Efeito de pulso contínuo */

@@ -100,7 +100,9 @@ body {
     transition: transform 0.3s ease;
 }
 
-
+.header ul li a:hover i {
+    transform: rotate(15deg); /* Efeito de rotação nos ícones */
+}
 
 @keyframes pulse {
     0% {
